@@ -14,7 +14,7 @@ pipeline {
         echo "Will deploy to ${params.environment_name}"
         //echo "Will deploy to ${params.environment_name}" >> {env.WORKSPACE}/file.groovey
         sh 'cd $WORKSPACE'
-        sh "sh testing.sh "${params.shell_command}""
+        sh 'sh testing.sh "${params.shell_command}"'
         //sh 'cat {env.WORKSPACE}/file.groovey'
       }
     }
