@@ -1,3 +1,3 @@
 a=$@
 echo $a
-$a /var/lib/jenkins/param/python.py 
+echo "$a /var/lib/jenkins/param/python.py"
