@@ -13,7 +13,7 @@ pipeline {
       steps {
         echo "Will deploy to ${params.environment_name}"
         //echo "Will deploy to ${params.environment_name}" >> {env.WORKSPACE}/file.groovey
-        sh "cat /var/lib/jenkins/param/python.py|\${params.shell_command}\"
+        sh "cat /var/lib/jenkins/param/python.py|\\${params.shell_command}\\"
         //sh 'cat {env.WORKSPACE}/file.groovey'
       }
     }
