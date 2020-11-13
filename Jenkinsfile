@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'k8s-build-general' }
+  agent any
 
   parameters {
     string(name: 'environment_name', description: 'Environment to deploy into')
