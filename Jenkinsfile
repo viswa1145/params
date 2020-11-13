@@ -13,7 +13,7 @@ pipeline {
       steps {
         echo "Will deploy to ${params.environment_name}"
         echo "Will deploy to ${params.environment_name}" >> $WROKSPACE/file.groovey
-        sh 'cat WROKSPACE/file.groovey'
+        sh 'cat $WORKSPACE/file.groovey'
       }
     }
    }
