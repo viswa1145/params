@@ -13,7 +13,7 @@ pipeline {
       steps {
         echo "Will deploy to ${params.environment_name}"
         sh 'ENVIRONMENT_NAME=${params.environment_name}'
-        sh 'cat /var/log/auth.log |${params.shell_command}'
+        sh 'cat /var/log/auth.log'
       }
     }
    }
