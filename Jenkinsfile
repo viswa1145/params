@@ -12,7 +12,8 @@ pipeline {
     stage('Print environment name') {
       steps {
         echo "Will deploy to ${params.environment_name}"
-        sh 'cat /var/log/auth.log'
+        echo "Will deploy to ${params.environment_name}" >> $WORKSPACE/file.groovey
+        sh 'cat $WORKSPACE/file.groovey'
       }
     }
    }
