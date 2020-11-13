@@ -7,15 +7,13 @@ pipeline {
     string(name: 'shell_command', defaultValue: '', description: 'commad do you want run')
   }
 
-  environment {
-    ENVIRONMENT_NAME = "${params.environment_name}"
-    SHELL_COMMAND = "${params.shell_command}"
-  }
 
   stages {
     stage('Print environment name') {
       steps {
         echo "Will deploy to ${params.environment_name}"
+        sh 'ENVIRONMENT_NAME=${params.environment_name}'
+        sh 'cat /var/log/auth.log |${params.shell_command}'
       }
     }
    }
